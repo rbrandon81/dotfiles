@@ -103,19 +103,14 @@ set $term alacritty
 bindsym $mod+e mode "resize"
 bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy 
 
-default_border pixel 3
 
 #Exit Sway
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-gaps inner 10
-gaps outer 0 
-smart_gaps on
-
+#Launch Dmenu
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
     bindsym $mod+d exec $menu
 
-#xwayland disable
 
 #Clamshell Mode for Laptops
 set $laptop eDP-1
