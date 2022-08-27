@@ -2,10 +2,7 @@ set $mod Mod4
 
 # keyboard config (change this if  you want.)
 input * {
-    xkb_layout "br"
-    xkb_options "grp:win_space_toggle"
-    repeat_delay 300
-    repeat_rate 50
+    xkb_layout "us"
 }
 
 # wallpaper
@@ -29,7 +26,7 @@ set $down j
 set $up k
 set $right l
 
-set $term foot
+set $term alacritty
 
     bindsym $mod+Return exec $term
     bindsym $mod+q kill
@@ -108,11 +105,14 @@ bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy
 
 default_border pixel 3
 
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 gaps inner 10
 gaps outer 0 
 smart_gaps on
 
-xwayland disable
+set $menu dmenu_path | dmenu | xargs swaymsg exec --
+    bindsym $mod+d exec $menu
+#xwayland disable
 
 exec --no-startup-id pipewire &
 exec --no-startup-id pipewire-pulse &
