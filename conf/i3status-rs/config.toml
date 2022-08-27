@@ -1,0 +1,27 @@
+[theme]
+name = "modern"
+
+[icons]
+name = "awesome"
+
+[[block]]
+block = "load"
+
+[[block]]
+block = "memory"
+
+[[block]]
+block = "cpu"
+
+[[block]]
+block = "networkmanager"
+
+[[block]]
+block = "net"
+
+[[block]]
+block = "battery"
+
+[[block]]
+block= "time"
+
