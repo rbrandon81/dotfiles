@@ -112,7 +112,14 @@ smart_gaps on
 
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
     bindsym $mod+d exec $menu
+
 #xwayland disable
+
+#Clamshell Mode for Laptops
+set $laptop eDP-1
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+exec_always ~/.config/sway/clamshell.sh
 
 exec --no-startup-id pipewire &
 exec --no-startup-id pipewire-pulse &
