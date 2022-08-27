@@ -105,7 +105,9 @@ bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy
 
 default_border pixel 3
 
+#Exit Sway
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
 gaps inner 10
 gaps outer 0 
 smart_gaps on
@@ -126,3 +128,4 @@ exec dbus-launch --sh-syntax --exit-with-session sway
 
 exec --no-startup-id pipewire &
 exec --no-startup-id pipewire-pulse &
+
