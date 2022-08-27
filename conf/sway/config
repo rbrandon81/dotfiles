@@ -29,7 +29,7 @@ set $right l
 set $term alacritty
 
     bindsym $mod+Return exec $term
-    bindsym $mod+q kill
+    bindsym $mod+shift+q kill
     bindsym $mod+Shift+c reload
     bindsym $mod+r exec wofi --show run
 
@@ -82,7 +82,7 @@ set $term alacritty
 
     bindsym $mod+w layout tabbed
     bindsym F11 fullscreen
-    bindsym $mod+s floating toggle
+    bindsym $mod+shift+space floating toggle
     bindsym $mod+a focus parent
 
     mode "resize" {
