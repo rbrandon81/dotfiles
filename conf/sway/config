@@ -52,6 +52,7 @@ set $term alacritty
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+    bindsym $mod+f fullscreen
 
     # workspaces
     bindsym $mod+1 workspace number 1
@@ -133,7 +134,7 @@ exec_always ~/.config/sway/clamshell.sh
 #DBus
 exec dbus-launch --sh-syntax --exit-with-session sway
 
-exec --no-startup-id pipewire &
-exec --no-startup-id pipewire-pulse &
+#exec --no-startup-id pipewire &
+#exec --no-startup-id pipewire-pulse &
 
 
